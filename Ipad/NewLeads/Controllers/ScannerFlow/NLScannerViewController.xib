@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" promptedForUpgradeToXcode5="NO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NLScannerViewController">
+            <connections>
+                <outlet property="navBar" destination="10" id="16"/>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="viewBrowser" destination="4" id="17"/>
+                <outlet property="viewToolbar" destination="9" id="19"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="g8S-sj-3lI"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="Title" id="13"/>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4" userLabel="View_Browser">
+                    <rect key="frame" x="0.0" y="44" width="320" height="480"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                            <rect key="frame" x="124" y="306" width="73" height="30"/>
+                            <state key="normal" title="Test">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onButtonTest:" destination="-1" eventType="touchUpInside" id="23"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9" userLabel="View_Toolbar">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21">
+                            <rect key="frame" x="133" y="0.0" width="55" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Lr6-FC-kRX"/>
+                        <constraint firstItem="21" firstAttribute="top" secondItem="9" secondAttribute="top" id="X3Q-ZN-WD1"/>
+                        <constraint firstAttribute="centerX" secondItem="21" secondAttribute="centerX" id="YLd-Du-z2b"/>
+                        <constraint firstAttribute="bottom" secondItem="21" secondAttribute="bottom" id="xtr-tF-iT0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4" firstAttribute="top" secondItem="10" secondAttribute="bottom" id="40b-rg-EJU"/>
+                <constraint firstItem="9" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="4og-gh-25q"/>
+                <constraint firstItem="9" firstAttribute="top" secondItem="4" secondAttribute="bottom" id="D9H-7D-OfL"/>
+                <constraint firstItem="10" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="K0G-3G-Y94"/>
+                <constraint firstAttribute="bottom" secondItem="9" secondAttribute="bottom" id="MYf-Fb-krh"/>
+                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="PoB-Tv-QeH"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="XHJ-79-tDI"/>
+                <constraint firstAttribute="trailing" secondItem="9" secondAttribute="trailing" id="bEY-Eu-DDy"/>
+                <constraint firstItem="10" firstAttribute="top" secondItem="1" secondAttribute="top" id="vtG-cR-UOo"/>
+                <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" id="yaH-2t-gzZ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="201" y="390"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

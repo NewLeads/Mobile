@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwitchCellID" id="KGk-i7-Jjw" customClass="NLSwitchCellView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pmp-H0-FXJ">
+                        <constraints>
+                            <constraint firstAttribute="height" id="0lm-xd-IjD"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" id="o86-Ch-pGq"/>
+                            <constraint firstAttribute="width" priority="750" id="vP6-vE-7Qt"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n01-hw-ILv" userLabel="View-Space">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" id="5qU-Vt-M4X"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQc-EE-myy" userLabel="Label_Text">
+                        <rect key="frame" x="10" y="5" width="223" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="a7H-4m-bsh"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" priority="500" constant="223" id="pha-cR-Ab4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPE-pS-FDn" userLabel="Button_Switch">
+                        <rect key="frame" x="251" y="6" width="51" height="31"/>
+                        <connections>
+                            <action selector="onChangeValue:" destination="KGk-i7-Jjw" eventType="valueChanged" id="SeM-SN-cZ2"/>
+                        </connections>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LPE-pS-FDn" firstAttribute="leading" secondItem="pQc-EE-myy" secondAttribute="trailing" constant="18" id="7xB-QB-WWV"/>
+                    <constraint firstAttribute="centerY" secondItem="pmp-H0-FXJ" secondAttribute="centerY" constant="21.75" id="8Eg-Mk-WnE"/>
+                    <constraint firstItem="pmp-H0-FXJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8c9-oK-fDm"/>
+                    <constraint firstAttribute="centerY" secondItem="pQc-EE-myy" secondAttribute="centerY" id="EOB-Qb-Mcu"/>
+                    <constraint firstAttribute="centerY" secondItem="LPE-pS-FDn" secondAttribute="centerY" id="GZi-Wn-GmN"/>
+                    <constraint firstItem="n01-hw-ILv" firstAttribute="width" secondItem="pmp-H0-FXJ" secondAttribute="width" multiplier="1:2" priority="750" id="Qd8-po-riU"/>
+                    <constraint firstItem="pQc-EE-myy" firstAttribute="leading" secondItem="n01-hw-ILv" secondAttribute="trailing" constant="10" id="WM0-P4-28J"/>
+                    <constraint firstItem="pmp-H0-FXJ" firstAttribute="trailing" secondItem="n01-hw-ILv" secondAttribute="leading" id="gHa-jM-aP1"/>
+                    <constraint firstAttribute="trailing" secondItem="LPE-pS-FDn" secondAttribute="trailing" constant="20" id="lRt-Qc-uPr"/>
+                    <constraint firstAttribute="centerY" secondItem="n01-hw-ILv" secondAttribute="centerY" constant="21.75" id="qT3-AF-dhn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="pmp-H0-FXJ" id="IEO-ui-LZR"/>
+                <outlet property="labelText" destination="pQc-EE-myy" id="rbd-gN-HMe"/>
+                <outlet property="viewSwitch" destination="LPE-pS-FDn" id="cQ3-Cf-rfY"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

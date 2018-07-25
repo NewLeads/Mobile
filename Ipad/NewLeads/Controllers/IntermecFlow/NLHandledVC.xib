@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NLHandledVC">
+            <connections>
+                <outlet property="fieldHandledScanner" destination="cHV-cB-zpY" id="QGg-NJ-NBf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press trigger button to scan code" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdu-DJ-9tQ">
+                    <rect key="frame" x="-40" y="8" width="400" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="400" id="Iav-tC-Aae"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="cC3-KA-g8z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Scanner data" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cHV-cB-zpY">
+                    <rect key="frame" x="20" y="36" width="280" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="D00-w3-zPP"/>
+                        <constraint firstAttribute="width" constant="280" id="Hve-e0-ApR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="IWX-b8-3Jg"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXF-cx-sj4">
+                    <rect key="frame" x="20" y="83" width="280" height="119"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="105" id="iIO-wA-sDt"/>
+                    </constraints>
+                    <string key="text">It is also possible to toggle the virtual keyboard on-and-off by simply pressing the trigger button 3 times within the same second (just like you would triple-click quickly the button on a computer mouse)</string>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just keep in mind to not aim at barcodes while doing this so as not to pick up unwanted data." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lm5-8D-eiy">
+                    <rect key="frame" x="20" y="390" width="280" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="63" id="Rpl-dy-Jl1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scanner_Mode01.png" translatesAutoresizingMaskIntoConstraints="NO" id="MlX-tN-bRR">
+                    <rect key="frame" x="8" y="218" width="304" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="IsJ-vz-jhj"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="fdu-DJ-9tQ" secondAttribute="centerX" id="B5l-b2-yki"/>
+                <constraint firstItem="bXF-cx-sj4" firstAttribute="top" secondItem="cHV-cB-zpY" secondAttribute="bottom" constant="17" id="CLv-UK-zd5"/>
+                <constraint firstItem="bXF-cx-sj4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Je9-15-4ha"/>
+                <constraint firstAttribute="trailing" secondItem="MlX-tN-bRR" secondAttribute="trailing" constant="8" id="Ji5-Uz-8f2"/>
+                <constraint firstAttribute="trailing" secondItem="Lm5-8D-eiy" secondAttribute="trailing" constant="20" id="KGd-Go-fhG"/>
+                <constraint firstAttribute="centerY" secondItem="cHV-cB-zpY" secondAttribute="centerY" constant="211" id="S9e-yt-Idx"/>
+                <constraint firstItem="MlX-tN-bRR" firstAttribute="top" secondItem="bXF-cx-sj4" secondAttribute="bottom" constant="16" id="Xst-zI-sKL"/>
+                <constraint firstItem="fdu-DJ-9tQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="Ywb-tz-kmF"/>
+                <constraint firstItem="MlX-tN-bRR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="bfe-2k-qyt"/>
+                <constraint firstAttribute="centerX" secondItem="cHV-cB-zpY" secondAttribute="centerX" id="eKv-s5-IZ7"/>
+                <constraint firstItem="Lm5-8D-eiy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="sEn-V5-wki"/>
+                <constraint firstAttribute="trailing" secondItem="bXF-cx-sj4" secondAttribute="trailing" constant="20" id="uwK-91-pVa"/>
+                <constraint firstItem="Lm5-8D-eiy" firstAttribute="top" secondItem="MlX-tN-bRR" secondAttribute="bottom" constant="22" id="z5S-Jk-IcK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="138" y="155"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Scanner_Mode01.png" width="400" height="182"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

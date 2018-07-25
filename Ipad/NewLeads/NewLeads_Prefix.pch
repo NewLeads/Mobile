@@ -1,0 +1,16 @@
+//
+// Prefix header for all source files of the 'NewLeads' target in the 'NewLeads' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+	#import <QuartzCore/QuartzCore.h>
+	//
+	#import "NLUtils.h"
+	#import "NLAlertView.h"
+	#import "NLContext.h"
+	#import "NSDictionary+XMLReader.h"
+	#import "XMLReader.h"
+	//
+#endif
